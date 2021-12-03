@@ -20,5 +20,9 @@ variable "aws_Secret_key" {
   description = "aws secret key"
   default = "rd7ilVMAQ1JLVyZEn8uXqV1YY70WW6Ycl354E6+d"
 }
+variable "checking" {
+  description = "test if terraform runs automatically"
+  default = "hello world"
+}
 
 
