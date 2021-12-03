@@ -4,7 +4,7 @@ provider "aws" {
   secret_key = var.aws_Secret_key
 }
 
-data "aws_ami" "ubuntu" {
+data "aws_ami" "test-instance-terraform" {
   most_recent = true
 
   filter {
@@ -21,7 +21,7 @@ data "aws_ami" "ubuntu" {
 }
 
 resource "aws_instance" "test-instance-terraform" {
-  ami           = data.aws_ami.ubuntu.id
+  ami           = data.aws_ami.test-instance-terraform.id
   instance_type = var.instance_type
 
   tags = {
